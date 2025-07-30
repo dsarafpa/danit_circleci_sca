@@ -27,7 +27,18 @@ jobs:
 
     - name: Verify Node.js Version
       run: node -v
+    
+    - name: Install Python 3 and pip
+        run: |
+          sudo apt update
+          sudo apt install -y python3 python3-pip python3-venv
 
+      - name: Check Versions
+        run: |
+          node -v
+          python3 --version
+          pip3 --version
+          
     - name: Download cortexcli
       run: |
         set -x
