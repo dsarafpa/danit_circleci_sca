@@ -34,11 +34,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+    - name: Install Python 3 and pip
+      run: |
+          sudo apt update
+          sudo apt install -y python3 python3-pip python3-venv yarn
+
     - name: Verify Versions
       run: |
           node -v
           java -version
           mvn -v
+          yarn -v
            
     - name: Download cortexcli
       run: |
