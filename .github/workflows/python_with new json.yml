@@ -28,27 +28,17 @@ jobs:
     - name: Verify Node.js Version
       run: node -v
     
-    # - name: Set up Java 17
-    #   uses: actions/setup-java@v4
-    #   with:
-    #       distribution: 'temurin'
-    #       java-version: '17'
+    - name: Set up Java 17
+      uses: actions/setup-java@v4
+      with:
+          distribution: 'temurin'
+          java-version: '17'
 
-    # - name: Verify Versions
-    #   run: |
-    #       node -v
-    #       java -version
-    #       mvn -v
-
-    - name: Install Python 3 and pip
-      run: |
-          sudo apt update
-          sudo apt install -y python3 python3-pip python3-venv
-          sudo npm install --global yarn
-          
     - name: Verify Versions
       run: |
-           yarn -v 
+          node -v
+          java -version
+          mvn -v
            
     - name: Download cortexcli
       run: |
