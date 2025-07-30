@@ -31,8 +31,8 @@ jobs:
               --directory "$(pwd)" \
               --repo-id "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}" \
               --branch "${CIRCLE_BRANCH}" \
-              --source "CIRCLE_CI" \
-              --create-repo-if-missing
+              --source "CIRCLE_CI"
+      
 workflows:
   cortex-scan-workflow:
     jobs:
