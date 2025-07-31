@@ -7,7 +7,6 @@ jobs:
       CORTEX_API_URL: https://api-viso-zwbufn2cbqbk3gq8kojwf8.xdr-qa2-uat.us.paloaltonetworks.com
     steps:
       - checkout
-
       - run:
           name: Download cortexcli
           command: |
