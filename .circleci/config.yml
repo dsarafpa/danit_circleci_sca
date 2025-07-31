@@ -15,6 +15,7 @@ jobs:
             crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \
               -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \
               -H "Authorization: ${CORTEX_API_KEY}") 
+              echo "$crtx_resp"
             crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
             curl -o cortexcli $crtx_url
             chmod +x cortexcli
